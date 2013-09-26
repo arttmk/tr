@@ -1,0 +1,31 @@
+#jquery-ui-effect {
+    display: none;
+    width: 300px;
+    padding: 50px 15px;
+    font-size: 15px;
+    background: #CCFFFF;
+}
+
+#jquery-ui-effect1 {
+    display: none;
+    width: 300px;
+    padding: 50px 15px;
+    font-size: 15px;
+    background: #CCFFFF;
+}
+
+/* ツールチップ */
+.tooltip_caption {
+  display: none;
+}
+.tooltip{
+  position: absolute;
+  display: none;
+  padding: 10px 13px;
+  z-index: 3;
+  color: #303030;
+  background-color: #F5F5B5;
+  border: 1px solid #DECA7E;
+  line-height: 18px;
+  text-align: center;
+}

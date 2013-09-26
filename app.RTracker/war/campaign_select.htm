@@ -1,0 +1,86 @@
+<html>
+  <head>
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<META EQUIV="expires" CONTENT="0">
+	
+    <title>Real-time Reach Tracker</title>
+    
+    <link href="./css/reset.css" rel="stylesheet" type="text/css">
+	<link href="./css/base.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/datepicker2/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/datepicker2/clean.css" />
+	<!--  <link rel="stylesheet" type="text/css" href="css/datepicker2/dark.css" /> -->
+    
+	<script type="text/javascript" src="js/tools/jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="js/tools/jquery-ui-1.9.2.custom/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="js/tools/jquery.simpletip-1.3.1.min.js"></script>
+	<script type="text/javascript" src="js/tools/jquery.activity-indicator-1.0.0.js"></script>
+    <script type="text/javascript" src="js/tools/jquery.confirm.js"></script>
+    
+	<script type="text/javascript" src="js/datepicker2/datepicker.js"></script>
+
+    <script type="text/javascript" src="js/function/tracker_jquery_functions.js"></script>
+    <script type="text/javascript" src="js/function/campaign_select.js"></script>
+
+  </head>
+  <body>
+  
+
+	<form method="$form.method" name="$form.name" action="$form.actionURL">  
+  		<input type="hidden" name="form_name" value="$form.name"/>  
+  
+		<div id="wrapper">
+			<div id="header">
+				<div id="header-logo"><img src="img/pic-logo-s.png"></div>
+				<div id="header-logout">$form.fields.login_user_company | $form.fields.login_user_name
+				$form.fields.logout
+				</div>
+			</div>
+			<div id="container">
+				<div class="wide">
+					#if ($form.fields.errMsg)
+					<div class="error">$form.fields.errMsg</div>
+					#end
+					<!-- search and create -->
+					<div class="clearfix">
+						<div id="cam-search" class="box-1">
+						<table>
+						<tr>
+						<th>Campaign-Name
+						<td>$form.fields.campaign_name
+						<tr>
+						<th>Campaign Period
+						<td>
+						$form.fields.start_date
+						$form.fields.end_date
+						<tr>
+						<th>&nbsp; 
+						<td>$form.fields.search_campaign
+						#if ($form.fields.over_max_count)
+						<div class="note">
+						$form.fields.over_max_count
+						</div>
+						#end
+						</table>
+						</div>
+						<div id="cam-create">
+						$form.fields.add_campaign
+						</div>
+					</div>
+					<!-- //search and create -->
+		
+					<!-- list -->
+					$campaign_table
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- hidden -->
+		$form.fields.hid_token
+		
+	</form>
+  
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.4">
+  
+  <listener>
+    <listener-class>org.apache.click.extras.gae.GoogleAppEngineListener</listener-class>
+  </listener>
+  
+  <javaee:display-name>tracker</javaee:display-name>
+  <servlet>
+    <servlet-name>ClickServlet</servlet-name>
+    <servlet-class>org.apache.click.ClickServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClickServlet</servlet-name>
+    <url-pattern>*.htm</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>load</servlet-name>
+    <servlet-class>servlet.LoadServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>load</servlet-name>
+    <url-pattern>/load</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>debug</servlet-name>
+    <servlet-class>logic.DebugLogic</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>debug</servlet-name>
+    <url-pattern>/debug</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>bigQuery</servlet-name>
+    <servlet-class>bigQuery.BigQueryWebServerAuthDemo</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bigQuery</servlet-name>
+    <url-pattern>/bigQuery</url-pattern>
+  </servlet-mapping>
+  
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+
+</web-app>

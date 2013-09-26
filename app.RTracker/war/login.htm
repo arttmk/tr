@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<META EQUIV="expires" CONTENT="0">
+<!--  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->	
+	
+
+<title>Real-time Reach Tracker</title>
+<link href="./css/reset.css" rel="stylesheet" type="text/css">
+<link href="./css/base.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/tools/jquery-1.7.2.js"></script>
+
+</head>
+
+<body>
+		<form method="$form.method" name="$form.name" action="$form.actionURL">
+	<input type="hidden" name="form_name" id="form_form_name" value="form"/>
+	
+		<div id="login">
+			<div id="login-logo"><img src="img/pic-logo.png"></div>
+			<div id="login-box">
+				#if ($form.fields.errMsg)
+				<div class="error">$form.fields.errMsg</div>
+				#end
+				<form>
+				<table>
+				<tr>
+				<th>Username
+				<td>$form.fields.login_id
+				<tr>
+				<th>Password
+				<td>$form.fields.password
+				<tr>
+				<th>&nbsp; 
+				<td>$form.fields.login
+				</table>
+				</form>
+			</div>
+		</div>
+		
+	</form>
+</body>
+</html>

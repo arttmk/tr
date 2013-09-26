@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+    <title>hello</title>
+    $imports
+  </head>
+  <script type="text/javascript">
+	<!--
+	function func_test() {
+	    alert("TEST");
+	}
+	// -->
+	</script>
+  <body>
+    <h3>$title</h3>
+    <p>$msg</p>
+    <p>$form1</p>
+
+    <p>$msg2</p>
+    <p>$form2</p>
+
+
+    #if ($filename)
+      $filenameとして保存しました。
+    #else
+      アップロードテスト<br />
+      <p>$form3</p>
+    #end
+
+	<p>$form4</p>
+
+
+    <button onclick="func_test()">JS test</button>
+
+  </body>
+</html>
